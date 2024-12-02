@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Landing Page</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #B8860B;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500') no-repeat center center/cover;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #D2B48C;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #D2B48C;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #ddd;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .feature img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .review {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+
+        /* Video Section */
+        .video {
+            text-align: center;
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        .video iframe {
+            width: 80%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #B8860B;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>BIENVENIDO</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a  href="#per">Personajes</a></li>
+            <li><a href="#re">Reseñas</a></li>
+            <li><a href="#ent">Entradas</a></li>
+            <li><a href="#res">Resumen</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Un Amor Indestructible</h1>
+        <p>Historia del amor entre Jung-Suh y Song- Joo.</p>
+        <button>Empezar</button>
+    </section>
+    <h2 id="per" class="fs-2 fw-bold mb-3">
+        <center>Personajes Princpales</center>
+    </h2>
+    <section class="features">
+
+        <div class="feature">
+            <img src="https://static.wikia.nocookie.net/doblaje/images/c/ce/Phpto_img02b.jpg/revision/latest/scale-to-width-down/80?cb=20171115222330&path-prefix=es"
+                alt="Feature 1">
+            <h3>Jung Suhn Han </h3>
+            <p>Protagonista.</p>
+        </div>
+        <div class="feature">
+            <img src="data:image/jpeg;base64,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"
+                alt="Feature 2">
+            <h3>Song-joo Cha </h3>
+            <p>Amigo de la infancia de Jung Suhn.</p>
+        </div>
+        <div class="feature">
+            <img src="https://static.wikia.nocookie.net/doblaje/images/9/9d/Thae-wa.jpg/revision/latest?cb=20171115224011&path-prefix=es"
+                alt="Feature 3">
+            <h3>Tae-hwa Han </h3>
+            <p>Hermano de Yoo-ri y hermanastro de Jung Suhn </p>
+        </div>
+        <div class="feature">
+            <img src="https://static.wikia.nocookie.net/doblaje/images/8/8a/Yuri-1.jpg/revision/latest/scale-to-width-down/80?cb=20171115225447&path-prefix=es"
+                alt="Feature 2">
+            <h3>Yoo Ri Han</h3>
+            <p>Hermanastra de Jung Suhn.</p>
+        </div>
+        <div class="feature">
+            <img src="https://static.wikia.nocookie.net/doblaje/images/f/f9/Stairway_belmere_%281%29.jpg/revision/latest/scale-to-width-down/80?cb=20171115233443&path-prefix=es"
+                alt="Feature 2">
+            <h3> MiRah Tae</h3>
+            <p>Madrastra de Jung Suhn.</p>
+        </div>
+    </section>
+
+    <section id="reviews" class="mb-5">
+        <h2 id="re" class="fs-2 fw-bold mb-3">
+            <center>Reseñas</center>
+        </h2>
+        <blockquote class="review">
+            <p class="text-dark fst-italic">"Es un hermoso dorama ❤️, lo ví por primera vez a los 8-9 años con mi madre
+                y hoy a los 22 años mire la serie pero entendiendo de verdad cada aspecto por muy mínimo que pareciera.
+                Es demasiado hermosa, la mejor actuación se la lleva este kdrama. Es asombrosa, los personajes
+                transmitieron demasiado, lloré, reí y me enojé, un sin número de emociones que uno puede llegar a sentir
+                cotidianamente. Las pude sentir aquí.
+                Cada personaje es muy complejo, cada uno tiene su propia historia, eso es lo que me fascina aunque no le
+                dieron un desarrollo amplio a todos los personajes realmente se evidenció el desarrollo de principio a
+                fin.
+                Si quieren ver una novela llena de amor, pero amor del bueno y real les recomiendo esto, es muy realista
+                las historias de este tipo no nacen de la mera imaginación se necesita estudiar el entorno, la sociedad
+                y otros factores más para poder desarrollar tremenda obra magistral. Espléndido ❤️
+                No tengo más palabras para definir, si quisiera explicarlo no me alcanza la página entera. Se las
+                recomiendo."</p> <cite class="text-dark fw-bold">- Juli Minn, Revista de Reseñas</cite>
+        </blockquote>
+        <blockquote class="review">
+            <p class="text-dark fst-italic">"Escalera al cielo fue el primer dorama que vi, el que me inició en ese
+                mundo de monitos coreanos, dramas que no te dejan dormir, y giros de trama que te sacan de tu zona de
+                confort. No importa cuantas veces lo he visto (el canal 4 no perdona), sigue haciéndome suspirar, amar y
+                odiar a muchos personajes y sus acciones."</p> <cite class="text-dark fw-bold">- Jane Reviewer, Blog de Cine</cite>
+        </blockquote>
+    </section>
+
+    <section>
+        <h2 id="ent" class="fs-2 fw-bold mb-3"><center>Entradas s</h2>
+        <p>Adquire tus entradas mediante nuestra app CINEPOLIS o presentate en nuestra sucursal y participa de juegos para ganar diversos premios</p><br>
+        <button>Entradas</button>
+    </section>
+
+    <section class="video">
+        <h2 id="res" class="fs-2 fw-bold mb-3">Resumen</h2><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/a3HsecZ7wcY?si=IRkWnv4hoa5vCgQQ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    </section>
+
+    <footer>
+        
+        <p>Univ: ALEJANDRA FLORES RAMOS</p>
+        <p>&copy; 2024 Escalera al Cielo. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
